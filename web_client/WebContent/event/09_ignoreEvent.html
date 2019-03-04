@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+</style>
+<body>
+	<p>
+		<a id="link" href="http://www.naver.com">네이버</a>로 이동
+	</p>
+	<script>
+		//사용자지정 액션이 먼저 실행된 후 a태그의 디폴트액션이 실행된다.
+		var link = document.getElementById("link");
+		link.onclick = function() {
+			//e.preventDefault(); // 디폴트 이벤트 핸들러가 실행된다. 밑에 실행 안됨.
+			
+			alert("클릭");
+			//throw "예외발생"; // 여기서 예외가 발생하면 return false가 실행되지 않는다. 
+			
+			return false;//false를 리턴하면 디폴트액션을 실행시키지 않도록 할 수 있다.
+		}
+	</script>
+</body>
+</html>
